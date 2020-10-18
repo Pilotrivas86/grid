@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+      }
+      .hero {
+        background: #274d62;
+        color: aliceblue;
+        font-family: "Open Sans", sans-serif;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: minmax(auto, 1024px);
+        justify-content: center;
+        padding: 32px 15px;
+      }
+
+      .wrap {
+        display: grid;
+        grid-template-columns: 180px 1fr 400px;
+        grid-gap: 10px;
+        /* grid-template-rows: 1fr 1fr fr, */
+        grid-template-areas: "box-img title form" ". description . " ". countdown .";
+      }
+      .box-img {
+        display: flex;
+        justify-items: center;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+      box-img {
+        grid-area: box-img;
+      }
+      .box-img img {
+        height: 180px;
+        width: 180px;
+        margin: 9px 9px;
+        padding: 10px 10px;
+      }
+      .title {
+        display: flex;
+        font-style: bold;
+        align-items: center;
+        justify-content: center;
+      }
+      .title h1 {
+        display: flex;
+        margin: 13px 13px;
+        font-size: 46px;
+      }
+      title {
+        grid-area: title;
+      }
+      .description {
+        font-size: 1.3em;
+        margin: 10px 10px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 100%;
+      }
+      .description {
+        grid-area: description;
+      }
+      form {
+        margin: 10px 10px;
+        justify-content: center;
+        align-items: center;
+        display: block;
+        text-align: center;
+        color: black;
+        background-color: bisque;
+        border-radius: 5px;
+      }
+      form p {
+        font-size: 1em;
+        margin: 2.5em;
+        /* justify-content: center;
+        align-items: center;
+        display: flex; */
+      }
+      form input {
+        border-radius: 5px;
+        color: blanchedalmond;
+      }
+      form button {
+        border-radius: 5px;
+      }
+      .form {
+        grid-area: form;
+      }
+      .countdown {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+      .countdown {
+        grid-area: countdown;
+      }
+      @media screen and (max-width: 842px) {
+        .wrap {
+          display: grid;
+          grid-template-columns: 180px 1fr;
+          grid-template-areas:
+            "box-img title"
+            "description description"
+            "form form"
+            "countdown countdown";
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>badge</title>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="wrap">
+        <div class="box-img">
+          <img src="chef.jpg" alt="" />
+        </div>
+        <div class="title">
+          <h1>Badge Practice</h1>
+        </div>
+        <div class="description">
+          Trasformamos la economia de nuestros paises<br />
+          entrenando a la proxima generacion de profecionales en tecnologia.
+        </div>
+        <form action="" class="form">
+          <p>como puedo ayudarte?</p>
+          <input type="email" placeholder="dejame tu email" />
+
+          <button type="submit">suscribete</button>
+        </form>
+        <div class="countdown">
+          <p>Lanzamiento:</p>
+          <span>24d</span>
+          <span>14:</span>
+          <span>11:</span>
+          <span>9s</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
